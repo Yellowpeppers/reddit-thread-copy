@@ -11,10 +11,10 @@ Supports **Markdown**, **Plain Text**, and **JSON**.
 - Minimal permissions.
 
 ## Install (Developer Mode)
-1. Go to GitHub → Releases, download `reddit-copy-thread.zip` (not the auto-generated “Source code” unless you know what you’re doing).
-2. Unzip. You should get a folder named `reddit-copy-thread/` that contains `manifest.json`.
-3. Chrome → `chrome://extensions` → enable **Developer mode**.
-4. Click **Load unpacked** and select the `reddit-copy-thread/` folder.
+1. Go to GitHub → Releases, download `reddit-copy-thread.zip`（不是自动生成的 “Source code” 包）。
+2. 解压后你会得到 7 个文件（包含 `manifest.json`、`popup.html/js/css`、`icon*.png`）。将这 7 个文件放在一个新建的文件夹里，例如 `reddit-copy-thread/`。
+3. Chrome → `chrome://extensions` → 开启 **开发者模式**。
+4. 点击 **加载已解压的扩展程序**，选择刚才放好 7 个文件的那个文件夹。
 5. Open any Reddit thread and click the toolbar icon.
 
 Tip: If your unzip tool shows errors, try the system unzip:

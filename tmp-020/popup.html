@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Reddit Copy Thread</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Reddit Copy Thread</h1>
+      <div id="status" class="muted">准备就绪</div>
+      <div class="row">
+        <div class="buttons">
+          <button id="scrapeBtn">抓取并预览</button>
+          <button id="copyBtn" disabled>复制</button>
+        </div>
+        <label class="fmt">
+          格式
+          <select id="fmt">
+            <option value="md" selected>Markdown</option>
+            <option value="txt">纯文本</option>
+            <option value="json">JSON</option>
+          </select>
+        </label>
+      </div>
+      <div id="meta"></div>
+      <pre id="preview" class="scroll"></pre>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

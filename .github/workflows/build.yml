@@ -11,15 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Archive extension
+      - name: Archive extension (root-level, 7 files)
         run: |
           set -euo pipefail
-          mkdir -p package/reddit-copy-thread
-          cp manifest.json popup.html popup.js popup.css icon16.png icon48.png icon128.png README.md LICENSE package/reddit-copy-thread/
-          cd package
-          zip -r reddit-copy-thread.zip reddit-copy-thread
+          zip -r reddit-copy-thread.zip manifest.json popup.html popup.js popup.css icon16.png icon48.png icon128.png
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: reddit-copy-thread-zip
-          path: package/reddit-copy-thread.zip
+          path: reddit-copy-thread.zip
