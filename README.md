@@ -11,11 +11,14 @@ Supports **Markdown**, **Plain Text**, and **JSON**.
 - Minimal permissions.
 
 ## Install (Developer Mode)
-1. Download the zip from Releases or this repo.
-2. Unzip.
+1. Go to GitHub → Releases, download `reddit-copy-thread.zip` (not the auto-generated “Source code” unless you know what you’re doing).
+2. Unzip. You should get a folder named `reddit-copy-thread/` that contains `manifest.json`.
 3. Chrome → `chrome://extensions` → enable **Developer mode**.
-4. Click **Load unpacked** and select the unzipped folder.
+4. Click **Load unpacked** and select the `reddit-copy-thread/` folder.
 5. Open any Reddit thread and click the toolbar icon.
+
+Tip: If your unzip tool shows errors, try the system unzip:
+`unzip reddit-copy-thread.zip`
 
 ## Usage
 - Click **抓取并预览** to build the tree.
