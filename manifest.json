@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Copy Thread",
+  "version": "0.3.0",
+  "description": "Copy a Reddit post and nested comments to clipboard as Markdown, Text, or JSON.",
+  "action": {
+    "default_title": "Reddit Copy Thread",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://www.reddit.com/*",
+    "https://old.reddit.com/*"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

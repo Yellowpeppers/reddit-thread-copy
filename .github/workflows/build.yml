@@ -1,0 +1,21 @@
+name: Build ZIP
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Archive extension
+        run: |
+          zip -r reddit-copy-thread.zip manifest.json popup.html popup.js popup.css icon16.png icon48.png icon128.png README.md LICENSE
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: reddit-copy-thread-zip
+          path: reddit-copy-thread.zip

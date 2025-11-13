@@ -1,0 +1,31 @@
+name: Bug report
+description: File a bug report
+labels: [bug]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Reddit URL
+      description: Link to the Reddit post you tested
+      placeholder: https://www.reddit.com/r/.../comments/...
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Tell us exactly how to reproduce the problem
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: Chrome 129 on macOS 14
+
