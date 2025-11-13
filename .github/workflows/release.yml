@@ -11,13 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Read version from manifest
+        id: vars
+        run: echo "version=$(node -p \"require('./manifest.json').version\")" >> "$GITHUB_OUTPUT"
       - name: Archive extension (root-level, 7 files)
         run: |
           set -euo pipefail
-          zip -r reddit-copy-thread.zip manifest.json popup.html popup.js popup.css icon16.png icon48.png icon128.png
+          zip -r "reddit-copy-threadv-${{ steps.vars.outputs.version }}.zip" manifest.json popup.html popup.js popup.css icon16.png icon48.png icon128.png
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          files: reddit-copy-thread.zip
+          files: reddit-copy-threadv-${{ steps.vars.outputs.version }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

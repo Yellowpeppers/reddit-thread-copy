@@ -11,10 +11,15 @@ Supports **Markdown**, **Plain Text**, and **JSON**.
 - Minimal permissions.
 
 ## Install (Developer Mode)
-1. Go to GitHub → Releases, download `reddit-copy-thread.zip`（不是自动生成的 “Source code” 包）。
-2. 解压后你会得到 7 个文件（包含 `manifest.json`、`popup.html/js/css`、`icon*.png`）。将这 7 个文件放在一个新建的文件夹里，例如 `reddit-copy-thread/`。
-3. Chrome → `chrome://extensions` → 开启 **开发者模式**。
-4. 点击 **加载已解压的扩展程序**，选择刚才放好 7 个文件的那个文件夹。
+方法 A（推荐，免解压）
+1) 到 GitHub → Releases 下载 `reddit-copy-threadv-<版本号>.zip`（例如 `reddit-copy-threadv-0.2.0.zip`，不要选 “Source code” 包）。
+2) 打开 Chrome → `chrome://extensions`，开启 **开发者模式**。
+3) 直接把这个 ZIP 拖进扩展页面，Chrome 会自动加载。
+
+方法 B（解压加载）
+1) 解压 ZIP 得到 7 个文件：`manifest.json`、`popup.html/js/css`、`icon16/48/128.png`。
+2) 放入一个文件夹（例如 `reddit-copy-thread/`）。
+3) 在 `chrome://extensions` 点击 **加载已解压的扩展程序**，选择该文件夹。
 5. Open any Reddit thread and click the toolbar icon.
 
 Tip: If your unzip tool shows errors, try the system unzip:
