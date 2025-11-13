@@ -1,34 +1,37 @@
 # Reddit Copy Thread
 
-Chrome MV3 extension to copy a Reddit post and its **nested comments** into your clipboard.
-Supports **Markdown**, **Plain Text**, and **JSON**.
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+![Demo: extension popup and output modes](image.png)
+
+Chrome MV3 extension to copy a Reddit post and its nested comments to your clipboard. Supports Markdown, Plain Text, and JSON. Runs entirely locally with minimal permissions.
 
 ## Features
-- One-click popup: *Scrape & Preview* → *Copy*.
-- Rebuilds the nested comment tree, tries to expand a round of `more`.
-- Outputs: **Markdown**, **Text**, **JSON**.
-- No server. All logic runs locally.
-- Minimal permissions.
+- One-click popup: Scrape & Preview → Copy
+- Rebuilds the nested comment tree, attempts a round of “more” expansion
+- Outputs: Markdown, Text, JSON
+- No server; all logic runs locally
+- Minimal permissions
 
 ## Install (Developer Mode)
-方法 A（推荐，免解压）
-1) 到 GitHub → Releases 下载 `reddit-copy-threadv-<版本号>.zip`（例如 `reddit-copy-threadv-0.2.0.zip`，不要选 “Source code” 包）。
-2) 打开 Chrome → `chrome://extensions`，开启 **开发者模式**。
-3) 直接把这个 ZIP 拖进扩展页面，Chrome 会自动加载。
+Method A (recommended, no unzip)
+1) Go to GitHub → Releases and download `reddit-copy-threadv-<version>.zip` (e.g., `reddit-copy-threadv-0.2.0.zip`). Do not pick the “Source code” archives.
+2) Open Chrome → `chrome://extensions` and enable Developer mode.
+3) Drag the ZIP into the Extensions page and Chrome will load it directly.
 
-方法 B（解压加载）
-1) 解压 ZIP 得到 7 个文件：`manifest.json`、`popup.html/js/css`、`icon16/48/128.png`。
-2) 放入一个文件夹（例如 `reddit-copy-thread/`）。
-3) 在 `chrome://extensions` 点击 **加载已解压的扩展程序**，选择该文件夹。
-5. Open any Reddit thread and click the toolbar icon.
+Method B (load unpacked from extracted files)
+1) Unzip to get 7 files: `manifest.json`, `popup.html/js/css`, `icon16/48/128.png`.
+2) Put them into a folder (e.g., `reddit-copy-thread/`).
+3) On `chrome://extensions` click “Load unpacked” and select that folder.
+4) Open any Reddit thread and click the toolbar icon.
 
-Tip: If your unzip tool shows errors, try the system unzip:
-`unzip reddit-copy-thread.zip`
+Tip: If your unzip tool shows errors, try the system unzip, for example:
+`unzip reddit-copy-threadv-0.2.0.zip`
 
 ## Usage
-- Click **抓取并预览** to build the tree.
-- Select **Markdown / 纯文本 / JSON**.
-- Click **复制** to copy to clipboard.
+- Click Scrape & Preview to build the tree.
+- Choose Markdown / Plain Text / JSON.
+- Click Copy to place output on the clipboard.
 
 ## Privacy
 - No data is sent to any server.
